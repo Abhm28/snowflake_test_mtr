@@ -41,11 +41,12 @@ view: orders {
   measure: count {
     type: count
   }
-  measure: period_over_period {
-    type: period_over_period
-    based_on: orders.count
-    based_on_time: orders.created_year
-    period: year
-    kind: previous
-  }
+
+  # measure: period_over_period {
+  #   type: period_over_period
+  #   based_on: orders.count
+  #   based_on_time: orders.created_year
+  #   period: year
+  #   kind: previous
+  # }
 }

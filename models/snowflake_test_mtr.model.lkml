@@ -37,9 +37,14 @@ explore: hundred_million_orders {}
 
 explore: orders {}
 
-explore: order_items {}
+explore: order_items {
+  join: orders {
+    type: inner
+    sql_on: ${order_items.order_id} = ${orders.id} ;;
+    relationship: many_to_one
+  }
+}
 
 explore: swett_orders_agg_table_wiht_hll {}
 
 explore: users {}
-

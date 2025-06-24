@@ -48,3 +48,5 @@ explore: order_items {
 explore: swett_orders_agg_table_wiht_hll {}
 
 explore: users {}
+
+explore: pdt_test {}

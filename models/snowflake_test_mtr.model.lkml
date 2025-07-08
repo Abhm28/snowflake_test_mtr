@@ -3,12 +3,13 @@ connection: "anthony-snowflake"
 
 # include all the views
 include: "/views/**/*.view.lkml"
+include: "/views/test1.view.lkml"
 
 # Datagroups define a caching policy for an Explore. To learn more,
 # use the Quick Help panel on the right to see documentation.
 
 datagroup: snowflake_test_mtr_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
+  sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
 }
 
@@ -43,3 +44,6 @@ explore: swett_orders_agg_table_wiht_hll {}
 
 explore: users {}
 
+explore: test1 {}
+
+explore: test_snowflake {}
